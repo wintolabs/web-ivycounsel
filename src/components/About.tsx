@@ -1,56 +1,72 @@
 // src/components/About.tsx
-import { Users, Award, BookOpen } from 'lucide-react'
+import { Users, Award, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section
+      id="about"
+      className="py-24 bg-gradient-to-tr from-gray-50 to-purple-50"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About IvyCounsel</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            About IvyCounsel
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At IvyCounsel, we believe education is the foundation for building a better tomorrow. Our mission is to provide exceptional learning experiences that prepare students for success in an ever-evolving world.
+            Empowering Global Students—One Journey at a Time
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Text Side */}
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
-            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-              We are dedicated to fostering an environment where students can explore their passions, develop critical thinking skills, and gain the knowledge necessary to make meaningful contributions to society.
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+              Our Mission
+            </h3>
+            <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+              We provide expert, personalized guidance that empowers individuals
+              to confidently navigate their journey from student to successful
+              professional—both in India and across the globe.
             </p>
-            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              Through innovative teaching methods, cutting-edge technology, and personalized attention, we ensure every student receives the support they need to achieve their goals.
+            <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+              We are committed to bridging education and career pathways through
+              culturally-aware, research-driven support that transforms
+              aspirations into achievements.
             </p>
+
             <div className="grid grid-cols-3 gap-6">
-              <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-blue-600">5000+</div>
+              <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400">
+                <Users className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <div className="text-3xl font-bold text-purple-600">50+</div>
                 <div className="text-gray-600 font-medium">Students</div>
               </div>
-              <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-blue-600">200+</div>
-                <div className="text-gray-600 font-medium">Faculty</div>
+              <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400">
+                <Award className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <div className="text-3xl font-bold text-purple-600">10+</div>
+                <div className="text-gray-600 font-medium">Counsellors</div>
               </div>
-              <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                <BookOpen className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-blue-600">50+</div>
+              <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400">
+                <BookOpen className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <div className="text-3xl font-bold text-purple-600">20+</div>
                 <div className="text-gray-600 font-medium">Programs</div>
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 shadow-lg">
-            <div className="w-full h-80 bg-gradient-to-br from-blue-200 to-purple-200 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-10 h-10 text-white" />
-                </div>
-                <span className="text-blue-600 text-lg font-semibold">Campus Experience</span>
-              </div>
-            </div>
+
+          {/* Image Side */}
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/college-student.jpg" // <-- Replace with your own path
+              alt="Confident college student with backpack"
+              width={800}
+              height={600}
+              className="object-cover w-full h-full"
+              priority
+            />
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

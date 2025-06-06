@@ -1,13 +1,13 @@
 // src/app/page.tsx
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
-import { About } from '@/components/About'
-import { Features } from '@/components/Features'
-import { Faculty } from '@/components/Faculty'
-import { Testimonials } from '@/components/Testimonials'
-import { FAQ } from '@/components/FAQ'
-import { Contact } from '@/components/Contact'
-import { Footer } from '@/components/Footer'
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Features } from "@/components/Features";
+import { WebinarPromo } from "@/components/WebinarPromo";
+import { FAQ } from "@/components/FAQ";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { Trust } from "@/components/Trust";
 
 export default function Home() {
   return (
@@ -16,11 +16,11 @@ export default function Home() {
       <Hero />
       <About />
       <Features />
-      <Faculty />
-      <Testimonials />
+      <WebinarPromo />
+      <Trust />
       <FAQ />
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }
