@@ -20,21 +20,6 @@ export function FAQ() {
       answer:
         "Applying to IvyCounsel is easy! You can fill out our online application form and submit the required documents through our website. Our admissions team will guide you through the entire process.",
     },
-    {
-      question: "What is the student-to-faculty ratio?",
-      answer:
-        "At IvyCounsel, we believe in personalized education, and our student-to-faculty ratio of 15:1 ensures that each student receives individual attention and support throughout their academic journey.",
-    },
-    {
-      question: "Do you offer online learning?",
-      answer:
-        "Yes, IvyCounsel provides comprehensive online learning options, allowing students to access quality education from anywhere in the world. Our hybrid learning model combines the best of online and in-person education.",
-    },
-    {
-      question: "What extracurricular activities are available?",
-      answer:
-        "IvyCounsel encourages students to participate in various extracurricular activities, including sports clubs, cultural organizations, student government, volunteer programs, and professional societies to enhance their overall learning experience.",
-    },
   ];
 
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);

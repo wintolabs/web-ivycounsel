@@ -13,7 +13,7 @@ export function Features() {
       Icon: Globe,
       title: "Exciting Opportunities",
       description:
-        "Explore top-tier programs like BS/MD, Ivy League, and global universities.",
+        "Explore top-tier undergraduate and graduate programs at Ivy Leagues and global universities.",
     },
     {
       Icon: Microscope,
