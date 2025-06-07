@@ -96,7 +96,7 @@ export function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-gray-800 mt-10 py-6 text-center text-gray-500 text-sm">
+      <div className="border-t border-gray-800 mt-10 py-6 text-center text-gray-500 text-base">
         © 2025 IvyCounsel. All rights reserved.
       </div>
     </footer>

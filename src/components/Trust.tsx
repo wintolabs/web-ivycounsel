@@ -48,8 +48,8 @@ export function Trust() {
               <div className="w-16 h-16 mb-6 rounded-full bg-purple-100 group-hover:bg-purple-600 flex items-center justify-center transition-colors duration-300">
                 <Icon className="w-8 h-8 text-purple-600 group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
+              <p className="text-gray-600 text-lg leading-relaxed">
                 {description}
               </p>
             </div>

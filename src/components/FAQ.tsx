@@ -56,7 +56,7 @@ export function FAQ() {
             <div key={index} className="mb-4">
               <button
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                className="w-full bg-white p-6 rounded-xl shadow-md text-left flex justify-between items-center hover:shadow-lg transition-all duration-300 group"
+                className="w-full text-lg bg-white p-6 rounded-xl shadow-md text-left flex justify-between items-center hover:shadow-lg transition-all duration-300 group"
               >
                 <span className="font-semibold text-gray-900 pr-4">
                   {faq.question}

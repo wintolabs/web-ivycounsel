@@ -18,12 +18,12 @@ export function Hero() {
           {/* Left Content */}
           <div className="space-y-6 md:space-y-8 text-center lg:text-left order-2 lg:order-1">
             <div className="space-y-4 md:space-y-6">
-              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="text-base sm:text-xl md:text-xl lg:text-xl inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-medium mb-4">
                 <Star className="w-4 h-4 fill-current" />
                 #1 Educational Counseling Platform
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[0.9] tracking-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black text-gray-900 leading-[0.9] tracking-tight">
                 From{" "}
                 <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent">
                   Aspiration
@@ -40,7 +40,7 @@ export function Hero() {
               </p>
             </div>
 
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Transform your educational journey with our innovative programs
               designed to unlock your full potential and prepare you for
               tomorrow&apos;s challenges.

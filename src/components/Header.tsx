@@ -77,7 +77,7 @@ export function Header() {
             <button
               key={id}
               onClick={() => scrollToSection(id)}
-              className={`relative font-semibold text-gray-700 hover:text-purple-600 transition focus:outline-none rounded px-2 py-1 ${
+              className={`relative font-medium text-lg text-gray-700 hover:text-purple-600 transition focus:outline-none rounded px-2 py-1 ${
                 activeSection === id ? "text-purple-600" : ""
               }`}
               aria-current={activeSection === id ? "page" : undefined}
@@ -112,7 +112,7 @@ export function Header() {
             <button
               key={id}
               onClick={() => scrollToSection(id)}
-              className={`text-lg font-semibold text-gray-700 hover:text-purple-600 transition focus:outline-none rounded px-3 py-2 ${
+              className={`text-base font-semibold text-gray-700 hover:text-purple-600 transition focus:outline-none rounded px-3 py-2 ${
                 activeSection === id ? "text-purple-600" : ""
               }`}
               aria-current={activeSection === id ? "page" : undefined}

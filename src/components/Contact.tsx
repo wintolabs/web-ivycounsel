@@ -61,7 +61,7 @@ export function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 Send Us a Message
               </h3>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-600 text-xl mb-8">
                 Fill out the form below and we&apos;ll get back to you as soon
                 as possible.
               </p>
@@ -80,7 +80,7 @@ export function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-base font-medium text-gray-700 mb-2"
                     >
                       Full Name *
                     </label>
@@ -99,7 +99,7 @@ export function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-base font-medium text-gray-700 mb-2"
                     >
                       Email Address *
                     </label>
@@ -120,7 +120,7 @@ export function Contact() {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-base font-medium text-gray-700 mb-2"
                     >
                       Phone Number
                     </label>
@@ -138,7 +138,7 @@ export function Contact() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className="block text-base font-medium text-gray-700 mb-2"
                     >
                       Subject *
                     </label>
@@ -163,7 +163,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-base font-medium text-gray-700 mb-2"
                   >
                     Message *
                   </label>

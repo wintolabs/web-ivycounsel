@@ -7,17 +7,17 @@ export function WebinarPromo() {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Left side: Info */}
         <div className="md:w-1/2">
-          <h2 className="text-4xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+          <h2 className="text-3xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
             Join Our Exclusive Webinar
           </h2>
-          <p className="text-lg mb-6 leading-relaxed drop-shadow-md">
+          <p className="text-xl mb-6 leading-relaxed drop-shadow-md">
             Unlock your potential with expert insights, live Q&A, and practical
             strategies. Don&apos;t miss out on this interactive learning
             experience!
           </p>
 
           {/* Info blocks */}
-          <div className="flex flex-col space-y-4 mb-8">
+          <div className="flex flex-col text-lg space-y-4 mb-8">
             <div className="flex items-center gap-3">
               <CalendarDays className="w-6 h-6 text-yellow-300" />
               <span className="font-semibold">
@@ -37,7 +37,7 @@ export function WebinarPromo() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 text-lg">
             <a
               href="#register"
               className="inline-block bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold px-8 py-3 rounded-lg shadow-lg transition"
