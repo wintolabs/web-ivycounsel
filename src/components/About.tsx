@@ -35,21 +35,29 @@ export function About() {
               aspirations into achievements.
             </p>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-0">
               <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400">
                 <Users className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="text-3xl font-bold text-purple-600">50+</div>
-                <div className="text-gray-600 font-medium">Students</div>
+                <div className="text-gray-600 font-medium text-base">
+                  Students
+                </div>
               </div>
+
               <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400">
                 <Award className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="text-3xl font-bold text-purple-600">10+</div>
-                <div className="text-gray-600 font-medium">Counsellors</div>
+                <div className="text-gray-600 font-medium text-base">
+                  Counsellors
+                </div>
               </div>
+
               <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400">
                 <BookOpen className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="text-3xl font-bold text-purple-600">20+</div>
-                <div className="text-gray-600 font-medium">Programs</div>
+                <div className="text-gray-600 font-medium text-base">
+                  Programs
+                </div>
               </div>
             </div>
           </div>
