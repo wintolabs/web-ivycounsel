@@ -1,6 +1,8 @@
 import { CalendarDays, Clock, Video } from "lucide-react";
 import Image from "next/image";
 
+const WEBINAR_GOOGLE_FORMS_ID = process.env.WEBINAR_GOOGLE_FORMS_ID;
+
 export function WebinarPromo() {
   return (
     <section className="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white py-16 px-6 sm:px-12 md:px-24 rounded-lg shadow-lg max-w-5xl mx-auto my-16">
@@ -36,19 +38,15 @@ export function WebinarPromo() {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 text-lg">
+          {/* CTA Button */}
+          <div className="w-full sm:w-auto mt-4">
             <a
-              href="#register"
-              className="inline-block bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold px-8 py-3 rounded-lg shadow-lg transition"
+              href={`https://docs.google.com/forms/d/${WEBINAR_GOOGLE_FORMS_ID}/viewform`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold text-center px-8 py-3 rounded-lg shadow-lg transition"
             >
               Register Now
-            </a>
-            <a
-              href="#learnmore"
-              className="inline-block border border-white hover:border-yellow-400 hover:text-yellow-400 px-8 py-3 rounded-lg transition text-white font-semibold"
-            >
-              Learn More
             </a>
           </div>
         </div>
