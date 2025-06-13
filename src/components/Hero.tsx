@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowRight, Star } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -23,7 +23,7 @@ export function Hero() {
                 #1 Educational Counseling Platform
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black text-gray-900 leading-[0.9] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-black text-gray-900 leading-[0.9] tracking-tight">
                 From{" "}
                 <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent">
                   Aspiration

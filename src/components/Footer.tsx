@@ -2,21 +2,19 @@
 
 import {
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
-  Youtube,
   Mail,
-  Phone,
-  MapPin,
+  // Phone,
+  // MapPin,
 } from "lucide-react";
 
 const socialLinks = [
   { Icon: Facebook, href: "#", label: "Facebook" },
-  { Icon: Twitter, href: "#", label: "Twitter" },
+  // { Icon: Twitter, href: "#", label: "Twitter" },
   { Icon: Instagram, href: "#", label: "Instagram" },
   { Icon: Linkedin, href: "#", label: "LinkedIn" },
-  { Icon: Youtube, href: "#", label: "YouTube" },
+  // { Icon: Youtube, href: "#", label: "YouTube" },
 ];
 
 // Added 'home' for scroll to top
@@ -51,14 +49,14 @@ export function Footer() {
           </p>
 
           <div className="space-y-2 text-base text-gray-400">
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-purple-500" />
               <span>123 Education Street, Academic City</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5 text-purple-500" />
               <span>+1 (555) 123-4567</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-purple-500" />
               <span>info@ivycounsel.com</span>
