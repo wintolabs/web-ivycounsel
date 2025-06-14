@@ -36,14 +36,14 @@ export function Hero() {
               </h1>
 
               <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-purple-600 tracking-wide">
-                Let Us Guide Your Journey
+                Your Gateway to Top U.S. Colleges
               </p>
             </div>
 
             <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Transform your educational journey with our innovative programs
-              designed to unlock your full potential and prepare you for
-              tomorrow&apos;s challenges.
+              Join a select group of students receiving one-on-one mentorship
+              from top US based experts. Only 10 seats for 2025 designed to
+              elevate your profile for world-class universities.
             </p>
 
             <div className="pt-4">

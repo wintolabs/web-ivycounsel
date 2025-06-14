@@ -8,6 +8,7 @@ import {
   // Phone,
   // MapPin,
 } from "lucide-react";
+import Image from "next/image";
 
 const socialLinks = [
   { Icon: Facebook, href: "#", label: "Facebook" },
@@ -38,12 +39,26 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-white text-gray-700">
       <div className="container mx-auto px-6 py-12 max-w-6xl flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0">
         {/* Left: Company info */}
         <div className="max-w-sm space-y-4">
-          <h3 className="text-white text-3xl font-semibold">IvyCounsel</h3>
-          <p className="text-gray-400 text-base">
+          {/* <h3 className="text-white text-3xl font-semibold">IvyCounsel</h3> */}
+          <div
+            onClick={() => scrollToSection("home")}
+            className="cursor-pointer flex items-start"
+          >
+            <Image
+              src="/ivyc-368_100.png"
+              alt="IvyCounsel Logo"
+              width={180}
+              height={40}
+              priority
+              className="block"
+            />
+          </div>
+
+          <p className="text-gray-700 text-base">
             Empowering minds, building futures. Join us in creating the next
             generation of leaders and innovators.
           </p>
@@ -59,7 +74,7 @@ export function Footer() {
             </div> */}
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-purple-500" />
-              <span>info@ivycounsel.com</span>
+              <span className="text-gray-700">info@ivycounsel.com</span>
             </div>
           </div>
 
@@ -69,7 +84,7 @@ export function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="w-8 h-8 bg-gray-800 hover:bg-purple-600 transition-colors rounded flex items-center justify-center text-gray-400 hover:text-white"
+                className="w-8 h-8 bg-gray-200 hover:bg-purple-600 transition-colors rounded flex items-center justify-center text-gray-700 hover:text-white"
               >
                 <Icon className="w-4 h-4" />
               </a>
@@ -94,7 +109,7 @@ export function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-gray-800 mt-10 py-6 text-center text-gray-500 text-base">
+      <div className="border-t border-gray-800 mt-10 py-6 text-center text-gray-700 text-base">
         © 2025 IvyCounsel. All rights reserved.
       </div>
     </footer>

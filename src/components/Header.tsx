@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { id: "home", label: "Home" },
@@ -62,9 +63,15 @@ export function Header() {
         <button
           onClick={() => scrollToSection("home")}
           aria-label="Go to home"
-          className="text-2xl font-extrabold text-purple-600 hover:text-purple-700 transition focus:outline-none rounded"
+          className="focus:outline-none"
         >
-          IvyCounsel
+          <Image
+            src="/ivyc-368_100.png"
+            alt="IvyCounsel Logo"
+            width={180}
+            height={40}
+            priority
+          />
         </button>
 
         {/* Desktop Navigation */}
