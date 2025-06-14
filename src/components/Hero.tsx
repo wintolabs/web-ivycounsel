@@ -35,7 +35,7 @@ export function Hero() {
                 </span>
               </h1>
 
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-purple-600 tracking-wide">
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-purple-600 tracking-normal">
                 Your Gateway to Top U.S. Colleges
               </p>
             </div>
