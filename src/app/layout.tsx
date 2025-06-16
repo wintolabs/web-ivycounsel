@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "To provide the personalized, research-driven support each student deserves, we work with a limited number of students at a time. Spots fill quickly—don’t miss out!",
   keywords: "education, university, college, learning, courses, programs",
   authors: [{ name: "IvyCounsel" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export const viewport = {
