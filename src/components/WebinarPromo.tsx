@@ -16,7 +16,10 @@ const WEBINAR_GOOGLE_FORMS_ID = process.env.WEBINAR_GOOGLE_FORMS_ID;
 
 export function WebinarPromo() {
   return (
-    <section className="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white py-16 px-6 sm:px-12 md:px-24 rounded-lg shadow-lg max-w-5xl mx-auto my-16">
+    <section
+      id="webinar"
+      className="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white py-16 px-6 sm:px-12 md:px-24 rounded-lg shadow-lg max-w-5xl mx-auto my-16"
+    >
       <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Left Side */}
         <div className="md:w-1/2">
