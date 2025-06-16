@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const NAV_LINKS = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
   { id: "features", label: "Features" },
+  { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -20,16 +20,20 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Update active section based on scroll position
-      const scrollPos = window.scrollY + 100; // offset for header height
       let current = "home";
 
       for (const { id } of NAV_LINKS) {
         const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPos) {
-          current = id;
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          const isVisible = rect.top <= 150 && rect.bottom >= 150;
+          if (isVisible) {
+            current = id;
+            break; // Stop checking once found
+          }
         }
       }
+
       setActiveSection(current);
     };
 
@@ -38,15 +42,12 @@ export function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    if (sectionId === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      setIsMenuOpen(false);
-      return;
-    }
-
     const el = document.getElementById(sectionId);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -80; // adjust if header covers top
+      const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
       setIsMenuOpen(false);
     }
   };

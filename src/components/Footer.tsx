@@ -21,8 +21,8 @@ const socialLinks = [
 // Added 'home' for scroll to top
 const footerLinks = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
   { id: "features", label: "Features" },
+  { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
 

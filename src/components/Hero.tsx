@@ -6,36 +6,34 @@ import Image from "next/image";
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 pt-20 pb-12 md:py-16 lg:py-0 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
+    <section className="relative min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 overflow-hidden flex items-center">
+      <div className="container mx-auto px-6 lg:px-12 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 md:space-y-8 text-center lg:text-left order-2 lg:order-1">
+          <div className="lg:col-span-6 text-center lg:text-left space-y-6">
             <div className="space-y-4 md:space-y-6">
-              <div className="text-base sm:text-xl md:text-xl lg:text-xl inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-100 text-purple-700 text-sm sm:text-base font-medium shadow-sm mb-4 w-fit mx-auto lg:mx-0">
                 <Star className="w-4 h-4 fill-current" />
                 #1 Educational Counseling Platform
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-black text-gray-900 leading-[0.9] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight lg:leading-[1.1] break-words">
                 From{" "}
-                <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent">
+                <span className="inline-block bg-gradient-to-r from-purple-600 via-purple-700 to-blue-600 bg-clip-text text-transparent">
                   Aspiration
                 </span>
-                <br />
+                <br className="hidden sm:block" />
                 to{" "}
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 bg-clip-text text-transparent">
+                <span className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 bg-clip-text text-transparent">
                   Achievement
                 </span>
               </h1>
 
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-purple-600 tracking-normal">
+              <p className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 tracking-wide mt-4">
                 Your Gateway to Top U.S. Colleges
               </p>
             </div>
@@ -48,7 +46,7 @@ export function Hero() {
 
             <div className="pt-4">
               <button
-                onClick={() => scrollToSection("features")}
+                onClick={() => scrollToSection("contact")}
                 className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-2xl px-8 py-4 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 aria-label="Start your journey"
               >
@@ -62,39 +60,26 @@ export function Hero() {
           </div>
 
           {/* Right Content */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative max-w-lg">
-              {/* Single image container */}
-              <div className="relative w-[320px] h-[400px] sm:w-[380px] sm:h-[480px] lg:w-[420px] lg:h-[520px]">
-                {/* Decorative background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-blue-200 rounded-[2.5rem] transform rotate-3 scale-105 opacity-20" />
+          <div className="lg:col-span-6 flex justify-center lg:justify-end relative">
+            <div className="absolute -top-20 -left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl opacity-30 z-0" />
+            <div className="absolute -bottom-16 -right-10 w-64 h-64 bg-blue-300 rounded-full blur-3xl opacity-25 z-0" />
 
-                {/* Main image container */}
-                <div className="relative w-full h-full transform rotate-2 hover:rotate-1 transition-all duration-700 hover:scale-105">
-                  <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl bg-white p-3 border border-white/50">
-                    <div className="w-full h-full rounded-[1.5rem] overflow-hidden">
-                      <Image
-                        src="/images/student-main.jpg"
-                        alt="Student studying with laptop"
-                        fill
-                        style={{ objectFit: "cover" }}
-                        priority
-                        sizes="(max-width: 640px) 320px, (max-width: 768px) 380px, 420px"
-                        className="transition-all duration-700"
-                      />
-                    </div>
-                  </div>
+            <div className="relative w-[320px] sm:w-[380px] lg:w-[420px] aspect-[3/4] z-10 group transition-transform duration-700 hover:scale-105 hover:-rotate-1">
+              <div className="rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.1)] bg-white/10 backdrop-blur-lg border border-white/10">
+                <div className="relative w-full h-full aspect-[3/4] overflow-hidden rounded-[1.5rem]">
+                  <Image
+                    src="/images/student-main.jpg"
+                    alt="Student studying with laptop"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    priority
+                    sizes="(max-width: 640px) 320px, (max-width: 768px) 380px, 420px"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Clean background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -right-48 w-96 h-96 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full opacity-30 blur-3xl" />
-        <div className="absolute -bottom-48 -left-48 w-96 h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-30 blur-3xl" />
       </div>
     </section>
   );
