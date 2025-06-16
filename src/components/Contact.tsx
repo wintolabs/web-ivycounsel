@@ -1,8 +1,8 @@
-// src/components/Contact.tsx
 "use client";
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { ContainerScroll } from "./ui/ContainerScroll";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -62,18 +62,18 @@ export function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-b from-white to-purple-50"
+    <ContainerScroll
+      titleComponent={
+        <h2 className="text-5xl font-bold text-black">
+          We’d Love to Hear From You
+        </h2>
+      }
     >
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            We’d Love to Hear From You{" "}
-          </h2>
-        </div>
-
-        <div className="max-w-xl mx-auto">
+      <div
+        id="contact"
+        className="w-full h-full flex justify-center items-center px-4 md:px-8"
+      >
+        <div className="w-full max-w-xl h-full overflow-auto">
           <div className="relative rounded-2xl p-1 shadow-xl">
             <div className="bg-white rounded-2xl p-6 md:p-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -163,7 +163,7 @@ export function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
+                    rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all resize-vertical"
                     placeholder="Tell us how we can help you..."
                   />
@@ -193,6 +193,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </ContainerScroll>
   );
 }
