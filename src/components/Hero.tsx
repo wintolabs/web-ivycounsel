@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-gray-950 to-gray-300 ">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-gray-950 to-gray-500 ">
       {/* Background Image */}
       <Image
         src="/images/campus.jpg"
