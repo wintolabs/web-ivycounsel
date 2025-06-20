@@ -7,7 +7,8 @@ export async function POST(req: Request) {
   const { name, email, phone, message } = body;
 
   try {
-    const { error } = await resend.emails.send({
+    // 1. Send email to IvyCounsel admin
+    const { error: adminError } = await resend.emails.send({
       from: `IvyCounsel <${process.env.RESEND_FROM_EMAIL}>`,
       to: process.env.RESEND_TO_EMAIL!,
       subject: `New Contact Form Message from ${name}`,
@@ -83,13 +84,35 @@ export async function POST(req: Request) {
       `,
     });
 
-    if (error) {
-      console.error("New Error", JSON.stringify(error));
-      return new Response(JSON.stringify({ error }), { status: 500 });
+    // 2. Send confirmation email to the user
+    const { error: userError } = await resend.emails.send({
+      from: `IvyCounsel <${process.env.RESEND_FROM_EMAIL}>`,
+      to: email,
+      subject: "Thanks for contacting IvyCounsel!",
+      html: `
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 30px;">
+          <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 10px; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h2 style="color: #2c3e50;">Hello ${name},</h2>
+            <p style="color: #555; font-size: 16px;">Thank you for contacting <strong>IvyCounsel</strong>.</p>
+            <p style="color: #555; font-size: 16px;">We’ve received your message and will get back to you shortly.</p>
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;" />
+            <p style="font-size: 14px; color: #999;">If you did not fill out the contact form, please ignore this email.</p>
+            <p style="font-size: 12px; color: #aaa;">© 2025 IvyCounsel. All rights reserved.</p>
+          </div>
+        </div>
+      `,
+    });
+
+    if (adminError || userError) {
+      console.error("Email sending error(s):", { adminError, userError });
+      return new Response(JSON.stringify({ error: adminError || userError }), {
+        status: 500,
+      });
     }
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (err) {
+    console.error("Unexpected error", err);
     return new Response(JSON.stringify({ error: "Unexpected error" }), {
       status: 500,
     });
