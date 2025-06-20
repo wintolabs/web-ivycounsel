@@ -71,7 +71,7 @@ export function WebinarPromo() {
                 className="text-yellow-400 w-6 h-6"
               />
               <span className="font-semibold">
-                Date: <time>June 22, 2025</time>
+                Date: <time>June 29, 2025</time>
               </span>
             </div>
             <div className="flex items-center gap-3">
