@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -9,8 +9,8 @@ export async function POST(req: Request) {
   try {
     // 1. Send email to IvyCounsel admin
     const { error: adminError } = await resend.emails.send({
-      from: `IvyCounsel <${process.env.NEXT_PUBLIC_RESEND_FROM_EMAIL}>`,
-      to: process.env.NEXT_PUBLIC_RESEND_TO_EMAIL!,
+      from: `IvyCounsel <${process.env.RESEND_FROM_EMAIL}>`,
+      to: process.env.RESEND_TO_EMAIL!,
       subject: `New Contact Form Message from ${name}`,
       html: `
         <!DOCTYPE html>
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
 
     // 2. Send confirmation email to the user
     const { error: userError } = await resend.emails.send({
-      from: `IvyCounsel <${process.env.NEXT_PUBLIC_RESEND_FROM_EMAIL}>`,
+      from: `IvyCounsel <${process.env.RESEND_FROM_EMAIL}>`,
       to: email,
       subject: "Thanks for contacting IvyCounsel!",
       html: `
