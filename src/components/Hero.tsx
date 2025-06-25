@@ -4,12 +4,15 @@ import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import { Contact } from "./Contact";
 import { Button } from "./ui/MovingBorder";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
+
+  const words = `Join a select group of students receiving one-on-one mentorship from top US-based experts. Only 10 seats for 2025 — designed to elevate your profile for world-class universities.`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-gray-950 to-gray-500 ">
@@ -34,7 +37,6 @@ export function Hero() {
             <Star className="w-4 h-4 fill-current" />
             #1 Educational Counseling Platform
           </div>
-
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-xl">
             From{" "}
             <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
@@ -45,17 +47,10 @@ export function Hero() {
               Achievement
             </span>
           </h1>
-
           <p className="mt-6 text-xl sm:text-2xl md:text-3xl font-medium drop-shadow-md">
             Your Gateway to Top U.S. Colleges
           </p>
-
-          <p className="mt-4 text-xl sm:text-2xl text-white/90 max-w-2xl drop-shadow-sm">
-            Join a select group of students receiving one-on-one mentorship from
-            top US-based experts. Only 10 seats for 2025 — designed to elevate
-            your profile for world-class universities.
-          </p>
-
+          <TextGenerateEffect duration={1} filter={true} words={words} />
           <div className="mt-8">
             <Button
               borderRadius="1.75rem"
