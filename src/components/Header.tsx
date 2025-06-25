@@ -41,11 +41,16 @@ export function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsMenuOpen(false);
+      return;
+    }
+
     const el = document.getElementById(sectionId);
     if (el) {
-      const yOffset = -80; // adjust if header covers top
+      const yOffset = -80;
       const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-
       window.scrollTo({ top: y, behavior: "smooth" });
       setIsMenuOpen(false);
     }

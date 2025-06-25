@@ -1,18 +1,10 @@
+"use client";
+
 import Image from "next/image";
 
-import {
-  faBinoculars,
-  faCalendarDays,
-  faClock,
-  faComment,
-  faGraduationCap,
-  faHandPointRight,
-  faStar,
-  faVideo,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const WEBINAR_GOOGLE_FORMS_ID = process.env.WEBINAR_GOOGLE_FORMS_ID;
+const formUrl = process.env.NEXT_PUBLIC_WEBINAR_GOOGLE_FORMS_ID
+  ? `https://docs.google.com/forms/d/${process.env.NEXT_PUBLIC_WEBINAR_GOOGLE_FORMS_ID}/viewform`
+  : "#";
 
 export function WebinarPromo() {
   return (
@@ -20,102 +12,74 @@ export function WebinarPromo() {
       id="webinar"
       className="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white py-16 px-6 sm:px-12 md:px-24 rounded-lg shadow-lg max-w-5xl mx-auto my-16"
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+      <div className="flex flex-col md:flex-row items-start gap-10">
         {/* Left Side */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
-            Free 1-Hour Webinar: Unlock Your Future
+        <div className="md:w-2/3 space-y-6 text-base sm:text-lg md:text-xl leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">
+            FREE WEBINAR
+            <br />
+            Demystifying U.S. College Admissions
           </h2>
-          <div className="flex flex-col text-lg space-y-4 mb-8">
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faGraduationCap}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">
-                Only 10 seats for the 2025–2026 cohort
-              </span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faStar}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">
-                Learn secrets behind successful applications
-              </span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faComment}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">Live Q&A with advisors</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faBinoculars}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">
-                Get clarity on your next steps
-              </span>
-            </div>
+
+          {/* Event Info */}
+          <div className="space-y-2">
+            <p>
+              📅 <strong>Date:</strong> June 29, 2025
+            </p>
+            <p>
+              ⏰ <strong>Time:</strong> 11:00 AM – 12:00 PM IST
+            </p>
+            <p>
+              📌 <strong>Online – Register Now!</strong>
+            </p>
           </div>
 
-          {/* Info Blocks */}
-          <div className="flex flex-col text-lg space-y-4 mb-8">
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faCalendarDays}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">
-                Date: <time>June 29, 2025</time>
-              </span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faClock}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">
-                Time: 11:00 AM – 12:00 PM IST
-              </span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon
-                icon={faVideo}
-                className="text-yellow-400 w-6 h-6"
-              />
-              <span className="font-semibold">
-                Platform: Zoom (Link will be emailed)
-              </span>
-            </div>
+          {/* Questions */}
+          <div className="space-y-2 mt-4">
+            <p>🔷 Confused about how to apply to U.S. universities?</p>
+            <p>🔷 Want to know what top colleges are really looking for?</p>
+            <p>🔷 Curious about SAT/ACT, essays, financial aid, and more?</p>
+          </div>
+
+          {/* Description */}
+          <p className="mt-6">
+            Join Ivy Counsel for an insider’s guide to the U.S. college
+            admissions process — designed for students and parents who want
+            clarity, confidence, and a roadmap to success.
+          </p>
+
+          {/* Benefits */}
+          <div className="space-y-2 mt-4">
+            <p>✅ Learn how to build a strong profile</p>
+            <p>✅ Understand timelines, requirements & strategies</p>
+            <p>✅ Get answers from U.S. based admissions experts</p>
           </div>
 
           {/* CTA */}
-          <div className="w-full sm:w-auto mt-4">
+          <div className="mt-6">
+            <p>
+              🎯 <strong>Limited spots available –</strong>
+            </p>
+
             <a
-              href={`https://docs.google.com/forms/d/${WEBINAR_GOOGLE_FORMS_ID}/viewform`}
+              href={formUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold text-center px-8 py-3 rounded-lg shadow-lg transition"
+              className="inline-block mt-2 bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold text-xl px-6 py-3 rounded-lg shadow transition"
             >
-              <FontAwesomeIcon icon={faHandPointRight} className="w-5 h-5" />
-              Claim My Free Spot Now
+              Register here
             </a>
           </div>
         </div>
 
-        {/* Right Side: Image */}
-        <div className="md:w-1/2 flex justify-center">
+        {/* Right Side: Smaller Image */}
+        <div className="md:w-1/3 w-full flex justify-center md:justify-end">
           <Image
             src="/images/student-webinar.jpg"
             alt="Webinar illustration"
-            className="rounded-xl shadow-2xl max-w-full h-auto"
-            width={600}
-            height={400}
+            width={300}
+            height={200}
+            className="rounded-xl shadow-2xl object-contain max-w-full h-auto"
           />
         </div>
       </div>

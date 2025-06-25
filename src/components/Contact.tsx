@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
-import { GlowingEffect } from "./ui/glowing-effect"; // adjust path if needed
+import { GlowingEffect } from "./ui/glowing-effect";
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    school: "",
+    grade: "",
     message: "",
   });
 
@@ -32,7 +34,14 @@ export function Contact() {
       });
       if (res.ok) {
         setSubmitMessage("Thank you! We'll be in touch.");
-        setFormData({ name: "", email: "", phone: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          school: "",
+          grade: "",
+          message: "",
+        });
       } else {
         setSubmitMessage("Submission failed. Try again.");
       }
@@ -82,6 +91,20 @@ export function Contact() {
             placeholder="Phone Number"
             type="tel"
             value={formData.phone}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <input
+            name="school"
+            placeholder="School Name"
+            value={formData.school}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <input
+            name="grade"
+            placeholder="Student Grade (e.g. 10th, 12th)"
+            value={formData.grade}
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
