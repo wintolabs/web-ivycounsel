@@ -76,14 +76,14 @@ export async function POST(req: Request) {
           <table width="100%" cellpadding="0" cellspacing="0" style="padding: 40px 0;">
             <tr><td align="center">
               <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
-                <tr><td style="background-color: #5e3cf7; padding: 40px 30px; text-align: center;">
+                <tr><td style="background-color: #9335e6; padding: 40px 30px; text-align: center;">
                   <h1 style="color: #ffffff; margin: 0;">IvyCounsel</h1>
                   <p style="color: #e0dbfc; margin: 8px 0 0;">Empowering your global education journey</p>
                 </td></tr>
                 <tr><td style="padding: 40px 30px;">
                   <h2 style="margin: 0; color: #2c3e50;">Hello ${name},</h2>
                   <p style="color: #555; font-size: 16px; line-height: 1.6;">Thank you for contacting <strong>IvyCounsel</strong>!<br/>We’ve received your message and will get back to you shortly.</p>
-                  <div style="margin-top: 30px; padding: 20px; background-color: #f9f9fc; border-left: 4px solid #5e3cf7; border-radius: 8px;">
+                  <div style="margin-top: 30px; padding: 20px; background-color: #f9f9fc; border-left: 4px solid #9335e6; border-radius: 8px;">
                     <p style="margin: 0; font-size: 14px; color: #666;">📬 Your submission details:</p>
                     <p style="margin: 10px 0 0; font-size: 15px;"><strong>Name:</strong> ${name}</p>
                     <p style="margin: 5px 0 0; font-size: 15px;"><strong>Email:</strong> ${email}</p>
